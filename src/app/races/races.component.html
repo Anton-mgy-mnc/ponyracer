@@ -1,4 +1,6 @@
 <!-- eslint-disable prettier/prettier -->
-<div *ngFor="let race of races">
-  <h2>{{ race.name }}</h2>
-</div>
+@for (race of races; track race.id) {
+  <div>
+    <pr-race [raceModel]="race" />
+  </div>
+}
